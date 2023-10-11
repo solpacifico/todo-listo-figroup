@@ -1,0 +1,6 @@
+.DS_Store
+backend/.DS_Store
+backend/TodoApi/bin/
+backend/TodoApi/obj/
+backend/TodoApi/.vscode/
+
