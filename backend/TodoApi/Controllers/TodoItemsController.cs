@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
+
 using TodoApi.Data;
 using TodoApi.Models;
 
@@ -22,7 +24,9 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/TodoItems
-        [HttpGet]
+        
+        [EnableCors]
+        [HttpGet]        
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItemsT()
         {
           if (_context.TodoItemsT == null)
@@ -33,6 +37,7 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/TodoItems/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItem>> GetTodoItem(int id)
         {
@@ -40,6 +45,8 @@ namespace TodoApi.Controllers
           {
               return NotFound();
           }
+            
+            
             var todoItem = await _context.TodoItemsT.FindAsync(id);
 
             if (todoItem == null)
@@ -52,6 +59,7 @@ namespace TodoApi.Controllers
 
         // PUT: api/TodoItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(int id, TodoItem todoItem)
         {
@@ -83,6 +91,7 @@ namespace TodoApi.Controllers
 
         // POST: api/TodoItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
@@ -97,6 +106,7 @@ namespace TodoApi.Controllers
         }
 
         // DELETE: api/TodoItems/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(int id)
         {
@@ -109,7 +119,7 @@ namespace TodoApi.Controllers
             {
                 return NotFound();
             }
-
+            _context.Database.ExecuteSqlRaw($"DELETE FROM [dbo].[CategoriesT] where TodoItemId ={id.ToString()}");
             _context.TodoItemsT.Remove(todoItem);
             await _context.SaveChangesAsync();
 

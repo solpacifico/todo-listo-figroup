@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nI9babSHt2PTVxmNFPB6XN/LvVDdJsm6zI2oG9CXmoq2A+dYpcTJ4wFPWj4joj+j4hxJ4IjRSJ2RJxBWhU+HVQ==",
+  "dgSpecHash": "e9qsKTpynQqP8UiQj8qT5zd7jU2AsIYBE+/5C0AnAFZxoV0bRMo++5vkEyBNTlcoARC9aRie4g7pDajjBAwrIw==",
   "success": true,
   "projectFilePath": "/Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/TodoApi.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,10 @@
     "/Users/betofk/.nuget/packages/humanizer.core.zh-cn/2.14.1/humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/humanizer.core.zh-hans/2.14.1/humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/humanizer.core.zh-hant/2.14.1/humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "/Users/betofk/.nuget/packages/microsoft.aspnet.cors/5.2.9/microsoft.aspnet.cors.5.2.9.nupkg.sha512",
+    "/Users/betofk/.nuget/packages/microsoft.aspnet.webapi.client/5.2.9/microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
+    "/Users/betofk/.nuget/packages/microsoft.aspnet.webapi.core/5.2.9/microsoft.aspnet.webapi.core.5.2.9.nupkg.sha512",
+    "/Users/betofk/.nuget/packages/microsoft.aspnet.webapi.cors/5.2.9/microsoft.aspnet.webapi.cors.5.2.9.nupkg.sha512",
     "/Users/betofk/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.11/microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "/Users/betofk/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/betofk/.nuget/packages/microsoft.build/17.3.2/microsoft.build.17.3.2.nupkg.sha512",
@@ -119,6 +123,7 @@
     "/Users/betofk/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/betofk/.nuget/packages/newtonsoft.json.bson/1.0.1/newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/nuget.common/6.6.1/nuget.common.6.6.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/nuget.configuration/6.6.1/nuget.configuration.6.6.1.nupkg.sha512",
     "/Users/betofk/.nuget/packages/nuget.dependencyresolver.core/6.6.1/nuget.dependencyresolver.core.6.6.1.nupkg.sha512",
@@ -233,5 +238,36 @@
     "/Users/betofk/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/betofk/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Cors 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Cors",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebApi.Cors 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.Cors",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

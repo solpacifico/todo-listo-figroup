@@ -251,3 +251,8 @@
 /Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
 /Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
 /Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+/Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/System.Web.Cors.dll
+/Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/System.Net.Http.Formatting.dll
+/Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/System.Web.Http.dll
+/Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/System.Web.Http.Cors.dll
+/Users/betofk/Documents/repos/todo-listo-figroup/backend/TodoApi/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll

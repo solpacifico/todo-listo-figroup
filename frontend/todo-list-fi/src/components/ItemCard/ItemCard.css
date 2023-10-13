@@ -1,0 +1,11 @@
+.spacer{
+    width: 15px;
+}
+
+new-input-description{
+    width: 250px;
+}
+
+.date-text{
+    vertical-align: sub;
+}

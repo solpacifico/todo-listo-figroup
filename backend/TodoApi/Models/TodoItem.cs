@@ -13,6 +13,8 @@ namespace TodoApi.Models
 
         public virtual ICollection<Category> Categories { get; set; }
 
+        public DateTime DueDate {get; set;}
+
     }
 
 }
