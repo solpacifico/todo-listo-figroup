@@ -1,10 +1,14 @@
 import React from 'react';
 import type { Dayjs } from 'dayjs';
-
 import { Calendar, theme } from 'antd';
-import type { CalendarProps } from 'antd';
 import { DatePickerProps } from '../../Models/DatePickerProps';
 
+
+/**
+ * Encapsulate the Datepicker for update the date
+ * @param props Input props
+ * @returns stateless component
+ */
 export function DatePicker(props:DatePickerProps)
 {
     const onSelect = (date: Dayjs, selectInfo:any ) => {

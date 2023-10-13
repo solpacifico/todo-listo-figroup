@@ -3,9 +3,15 @@ import { ItemListProps } from '../../Models/ItemsListProps';
 import { TodoItem } from '../../Types/TodoItem';
 import ItemCard  from '../ItemCard/ItemCard';
 
-
+/**
+ * Repeater function,
+ * @param itemArray 
+ * @param props 
+ * @returns 
+ */
 const ItemArray = (itemArray:TodoItem[] | undefined,props:ItemListProps ) =>{
     return(
+        //Repeat each item in the array
         itemArray?.map((itemC) => <ItemCard 
             todoItemData={itemC}
             todoItemStateClickHandler={(isdone:boolean) => props.todoItemStateClickHandler 
@@ -20,7 +26,11 @@ const ItemArray = (itemArray:TodoItem[] | undefined,props:ItemListProps ) =>{
     )
 
 }
-
+/**
+ * Stateless functional component for render the list of todoItems
+ * @param props 
+ * @returns 
+ */
 export function ItemList(props:ItemListProps)
 {
     return(

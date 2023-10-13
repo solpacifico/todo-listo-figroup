@@ -7,13 +7,15 @@ import React from 'react';
 import dayjs from 'dayjs';
 
 /**
- * 
+ * This compoment has his own state for manage the edition state for individual components, but the information flow is top-down,
+ * this compoment is the main for render the todo item
  * @param props 
  * @returns 
  */
 const { Meta } = Card;
 const { Text, Link } = Typography;
 
+/** This CSS Const are intended to override ant-desing classes */
 const checktyle: React.CSSProperties = {       
         
     marginTop: "4px",
@@ -36,6 +38,9 @@ const checktyle: React.CSSProperties = {
     padding:"5px"
   };
 
+ /**
+  * Class component to render on Todo Item
+  */ 
 class  ItemCard extends React.Component<any,ItemCardProps> {
     constructor(props:ItemCardProps){
         super(props)
@@ -107,7 +112,12 @@ class  ItemCard extends React.Component<any,ItemCardProps> {
     }
 
    
-
+    /**
+     * Function Comoponet for conditional render based in the state
+     * @param insertMode edit mode switch
+     * @param description description current text
+     * @returns 
+     */
     TaskDescritiptionUpdater = (insertMode:boolean, description:string) =>{        
         if(insertMode){
             return(
@@ -141,7 +151,11 @@ class  ItemCard extends React.Component<any,ItemCardProps> {
         }
 
     } 
-
+/**
+ * Conditional render the edit status for date
+ * @param dateStr Date Input
+ * @returns 
+ */
     DateView = (dateStr:string) => {
         if(dateStr ==='0001-01-01T00:00:00'){
             return(
@@ -164,7 +178,10 @@ class  ItemCard extends React.Component<any,ItemCardProps> {
 
     }
 
-   
+   /**
+    * Main Render
+    * @returns 
+    */
     render(){
         return (
             

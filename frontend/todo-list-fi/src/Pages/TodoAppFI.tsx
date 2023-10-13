@@ -91,7 +91,9 @@ const TodoAppFi:React.FC=()=>{
             })
         }
     }
-    
+    /**
+     * Get All todo Items
+     */
     const retrieveTodoItems = () =>{
         TodoItemApiService.getTodoItems()
             .then((response:any) =>{                
@@ -111,7 +113,9 @@ const TodoAppFi:React.FC=()=>{
                 console.log(e);
             })
     }
-
+/**
+ * Insert Method
+ */
     const insertNewTask =() =>{
         const allCategory:Category[] = [{
             id:0,
@@ -139,7 +143,9 @@ const TodoAppFi:React.FC=()=>{
         setInsertMode(false);
        
     }
-
+/**
+ * Renders the control for insert new task
+ */
     const newTaskInnputShow = () =>{
         if(insertMode){
             return(
@@ -171,14 +177,17 @@ const TodoAppFi:React.FC=()=>{
         }
 
     } 
-    
+    /**
+     * Main Return
+     */
     return(
         <>
             <div ref={container as unknown as LegacyRef<HTMLDivElement>}>
                 <div>
                 {newTaskInnputShow()}
-                </div>
-                <ItemList 
+                </div> 
+                
+                <ItemList //list of todo items
                     todoItemArray={todoItemsList}
                     todoItemStateClickHandler = {todoItemStateClickHandler}                             
                     UpdateTextClickHandler = {UpdateTextClickHandler}                    
